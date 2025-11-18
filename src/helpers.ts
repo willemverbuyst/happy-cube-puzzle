@@ -49,4 +49,3 @@ export function rotate270(grid: Uint8Array) {
   }
   return out;
 }
-

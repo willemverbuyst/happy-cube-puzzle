@@ -1,11 +1,8 @@
-import './App.css'
-import Grid from './Grid'
+import "./App.css";
+import Grid from "./Grid";
 
 function App() {
-
-  return (
-    <Grid/>
-  )
+  return <Grid />;
 }
 
-export default App
+export default App;
