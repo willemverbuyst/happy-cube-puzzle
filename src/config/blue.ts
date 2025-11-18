@@ -1,8 +1,6 @@
-import type { Grid } from "./types";
+import type { Grid, Piece } from "../types";
 
-export const ROWS = 11;
-export const COLS = 15;
-
+export const BLUE_COLOR = "rgba(151, 180, 235, 1)";
 export const BLUE_FRAME: Grid = [
   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   [1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1],
@@ -15,4 +13,11 @@ export const BLUE_FRAME: Grid = [
   [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
   [1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1],
   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-];
+] as const;
+export const BLUE_PIECE_1: Piece = [
+  [1, 0, 1, 0, 1],
+  [1, 1, 1, 1, 1],
+  [0, 1, 1, 1, 0],
+  [1, 1, 1, 1, 1],
+  [1, 0, 1, 0, 1],
+] as const;

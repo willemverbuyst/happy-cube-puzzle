@@ -1,9 +1,12 @@
-import { BLUE_FRAME, COLS, ROWS } from "./config";
-import { patternToUint8 } from "./helpers";
+import { COLS, ROWS } from "./config/general";
 
-export default function Grid() {
-  const blueGrid = patternToUint8(BLUE_FRAME);
-
+export default function Grid({
+  color,
+  frame,
+}: {
+  color: string;
+  frame: Uint8Array<ArrayBuffer>;
+}) {
   return (
     <div
       style={{
@@ -21,7 +24,7 @@ export default function Grid() {
               style={{
                 width: 20,
                 height: 20,
-                background: blueGrid[i] ? "rgba(151, 180, 235, 1)" : "#eee",
+                background: frame[i] ? color : "#eee",
               }}
             />
           );
