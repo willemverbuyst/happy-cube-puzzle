@@ -1,9 +1,10 @@
-import { blueGrid, COLS, ROWS } from "./config";
+import { BLUE_FRAME, COLS, ROWS } from "./config";
+import { patternToUint8 } from "./helpers";
 
 
 
 export default function Grid() {
-  
+  const blueGrid = patternToUint8(BLUE_FRAME);
 
 
 
