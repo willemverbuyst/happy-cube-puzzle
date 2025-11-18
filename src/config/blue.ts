@@ -21,3 +21,10 @@ export const BLUE_PIECE_1: Piece = [
   [1, 1, 1, 1, 1],
   [1, 0, 1, 0, 1],
 ] as const;
+export const BLUE_PIECE_2: Piece = [
+  [0, 1, 0, 1, 0],
+  [1, 1, 1, 1, 0],
+  [0, 1, 1, 1, 1],
+  [1, 1, 1, 1, 0],
+  [1, 1, 0, 1, 1],
+] as const;
