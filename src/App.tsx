@@ -8,8 +8,6 @@ import type { ColorType } from "./types";
 function App() {
   const [color, setColor] = useState<ColorType>("blue");
 
-  console.log("Selected color:", color);
-
   return (
     <div className="w-screen flex flex-col items-center p-20 gap-14">
       <div className="flex gap-2">
