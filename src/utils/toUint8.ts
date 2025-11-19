@@ -5,7 +5,7 @@ export function nestedArrayToUint8({
   rows,
   columns,
 }: {
-  pattern: Grid | Piece;
+  pattern: Grid<number, number> | Piece<number, number>;
   rows: number;
   columns: number;
 }) {
