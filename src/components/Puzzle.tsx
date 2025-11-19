@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { COLS, ROWS } from "../config/general";
+import { PUZZLE_COLUMNS, PUZZLE_ROWS } from "../config/general";
 
 export function Puzzle({
   color,
@@ -12,17 +12,17 @@ export function Puzzle({
     <div
       style={
         {
-          "--rows": ROWS,
-          "--cols": COLS,
+          "--rows": PUZZLE_ROWS,
+          "--cols": PUZZLE_COLUMNS,
           display: "grid",
           gridTemplateRows: "repeat(var(--rows), 20px)",
           gridTemplateColumns: "repeat(var(--cols), 20px)",
         } as React.CSSProperties
       }
     >
-      {Array.from({ length: ROWS }).map((_, r) =>
-        Array.from({ length: COLS }).map((_, c) => {
-          const i = r * COLS + c;
+      {Array.from({ length: PUZZLE_ROWS }).map((_, r) =>
+        Array.from({ length: PUZZLE_COLUMNS }).map((_, c) => {
+          const i = r * PUZZLE_COLUMNS + c;
           return (
             <div
               key={`${r}-${c}`}

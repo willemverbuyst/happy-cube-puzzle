@@ -10,7 +10,7 @@ import {
   CornerRightUp,
 } from "lucide-react";
 import { useState } from "react";
-import { PIECE_SIZE } from "../config/general";
+import { PIECE_COLUMNS, PIECE_ROWS } from "../config/general";
 import {
   flipHorizontal,
   flipVertical,
@@ -67,17 +67,17 @@ export default function Piece({
         <div
           style={
             {
-              "--rows": PIECE_SIZE,
-              "--cols": PIECE_SIZE,
+              "--rows": PIECE_ROWS,
+              "--cols": PIECE_COLUMNS,
               display: "grid",
               gridTemplateRows: "repeat(var(--rows), 20px)",
               gridTemplateColumns: "repeat(var(--cols), 20px)",
             } as React.CSSProperties
           }
         >
-          {Array.from({ length: PIECE_SIZE }).map((_, r) =>
-            Array.from({ length: PIECE_SIZE }).map((_, c) => {
-              const i = r * PIECE_SIZE + c;
+          {Array.from({ length: PIECE_ROWS }).map((_, r) =>
+            Array.from({ length: PIECE_COLUMNS }).map((_, c) => {
+              const i = r * PIECE_COLUMNS + c;
               return (
                 <div
                   key={`${r}-${c}`}
