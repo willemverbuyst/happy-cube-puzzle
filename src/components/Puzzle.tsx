@@ -10,8 +10,6 @@ export function Puzzle({ puzzleConfig }: { puzzleConfig: PuzzleConfig }) {
     columns: puzzleConfig.puzzleColumns,
   });
 
-  console.log("puzzleConfig:", puzzleConfig);
-
   return (
     <>
       <div
@@ -43,7 +41,7 @@ export function Puzzle({ puzzleConfig }: { puzzleConfig: PuzzleConfig }) {
       <div className="flex gap-14">
         {puzzleConfig.pieces.map((piece, index) => (
           <Piece
-            key={`color-${index}`}
+            key={`${puzzleConfig.color}-${index}`}
             color={puzzleConfig.color}
             piece={nestedArrayToUint8({
               pattern: piece,
