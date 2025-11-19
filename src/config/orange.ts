@@ -56,7 +56,7 @@ export const ORANGE_PIECE_6: Piece = [
   [1, 1, 1, 1, 0],
   [0, 1, 0, 1, 1],
 ] as const;
-export const ORANGE_PIECES = [
+export const ORANGE_PIECES: Piece[] = [
   ORANGE_PIECE_1,
   ORANGE_PIECE_2,
   ORANGE_PIECE_3,

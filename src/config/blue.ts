@@ -56,7 +56,7 @@ export const BLUE_PIECE_6: Piece = [
   [1, 1, 1, 1, 1],
   [1, 1, 0, 1, 0],
 ] as const;
-export const BLUE_PIECES = [
+export const BLUE_PIECES: Piece[] = [
   BLUE_PIECE_1,
   BLUE_PIECE_2,
   BLUE_PIECE_3,
