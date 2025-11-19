@@ -10,7 +10,6 @@ import {
   CornerRightUp,
 } from "lucide-react";
 import { useState } from "react";
-import { PIECE_COLUMNS, PIECE_ROWS } from "../config/general";
 import {
   flipHorizontal,
   flipVertical,
@@ -21,9 +20,13 @@ import {
 export default function Piece({
   color,
   piece,
+  rows,
+  columns,
 }: {
   color: string;
   piece: Uint8Array<ArrayBuffer>;
+  rows: number;
+  columns: number;
 }) {
   const [rotatedPiece, setRotatedPiece] = useState(piece);
 
@@ -67,17 +70,17 @@ export default function Piece({
         <div
           style={
             {
-              "--rows": PIECE_ROWS,
-              "--cols": PIECE_COLUMNS,
+              "--rows": rows,
+              "--cols": columns,
               display: "grid",
               gridTemplateRows: "repeat(var(--rows), 20px)",
               gridTemplateColumns: "repeat(var(--cols), 20px)",
             } as React.CSSProperties
           }
         >
-          {Array.from({ length: PIECE_ROWS }).map((_, r) =>
-            Array.from({ length: PIECE_COLUMNS }).map((_, c) => {
-              const i = r * PIECE_COLUMNS + c;
+          {Array.from({ length: rows }).map((_, r) =>
+            Array.from({ length: columns }).map((_, c) => {
+              const i = r * columns + c;
               return (
                 <div
                   key={`${r}-${c}`}

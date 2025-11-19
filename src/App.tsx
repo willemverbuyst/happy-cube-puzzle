@@ -1,11 +1,14 @@
 import clsx from "clsx";
 import { useState } from "react";
 import { Puzzle } from "./components/Puzzle";
-import { COLORS, type ColorType } from "./config/general";
+import { COLORS } from "./config/general";
 import { PUZZLES } from "./config/puzzles";
+import type { ColorType } from "./types";
 
 function App() {
   const [color, setColor] = useState<ColorType>("blue");
+
+  console.log("Selected color:", color);
 
   return (
     <div className="w-screen flex flex-col items-center p-20 gap-14">
