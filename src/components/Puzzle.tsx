@@ -1,7 +1,7 @@
 import clsx from "clsx";
-import { COLS, ROWS } from "./config/general";
+import { COLS, ROWS } from "../config/general";
 
-export default function Grid({
+export function Puzzle({
   color,
   frame,
 }: {

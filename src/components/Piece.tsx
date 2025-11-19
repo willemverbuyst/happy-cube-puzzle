@@ -1,8 +1,8 @@
 import { clsx } from "clsx";
 import { RotateCcwIcon, RotateCwIcon } from "lucide-react";
 import { useState } from "react";
-import { PIECE_SIZE } from "./config/general";
-import { rotateLeft, rotateRight } from "./helpers";
+import { PIECE_SIZE } from "../config/general";
+import { rotateLeft, rotateRight } from "../utils/rotate";
 
 export default function Piece({
   color,
