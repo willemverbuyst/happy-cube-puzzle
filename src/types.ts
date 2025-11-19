@@ -12,3 +12,5 @@ type _FixedArray<
 
 export type Grid = FixedArray<FixedArray<Cell, 15>, 11>;
 export type Piece = FixedArray<FixedArray<Cell, 5>, 5>;
+
+export type Color = `bg-${string}-400`;

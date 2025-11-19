@@ -1,6 +1,6 @@
-import type { Grid, Piece } from "../types";
+import type { Color, Grid, Piece } from "../types";
 
-export const BLUE_COLOR = "rgba(151, 180, 235, 1)";
+export const BLUE_COLOR: Color = "bg-blue-400";
 export const BLUE_FRAME: Grid = [
   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   [1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1],

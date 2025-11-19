@@ -1,4 +1,3 @@
-import "./App.css";
 import {
   BLUE_COLOR,
   BLUE_FRAME,
@@ -11,19 +10,13 @@ import Piece from "./Piece";
 
 function App() {
   return (
-    <section
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: 20,
-      }}
-    >
+    <div className="w-screen h-screen flex flex-col items-center p-20 gap-10">
       <Grid color={BLUE_COLOR} frame={gridToUint8(BLUE_FRAME)} />
-      <div style={{ display: "flex", gap: 30 }}>
+      <div className="flex gap-10">
         <Piece color={BLUE_COLOR} piece={pieceToUint8(BLUE_PIECE_1)} />
         <Piece color={BLUE_COLOR} piece={pieceToUint8(BLUE_PIECE_2)} />
       </div>
-    </section>
+    </div>
   );
 }
 

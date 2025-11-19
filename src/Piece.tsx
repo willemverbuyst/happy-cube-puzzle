@@ -1,3 +1,5 @@
+import { clsx } from "clsx";
+import { RotateCcwIcon, RotateCwIcon } from "lucide-react";
 import { useState } from "react";
 import { PIECE_SIZE } from "./config/general";
 import { rotateLeft, rotateRight } from "./helpers";
@@ -12,21 +14,25 @@ export default function Piece({
   const [rotatedPiece, setRotatedPiece] = useState(piece);
 
   return (
-    <div style={{ display: "flex", gap: 8 }}>
+    <div className="flex gap-2 items-start">
       <button
         onClick={() => {
           const newPiece = rotateLeft(rotatedPiece);
           setRotatedPiece(newPiece);
         }}
       >
-        Rotate -90°
+        <RotateCcwIcon className="text-gray-400" size={14} />
       </button>
       <div
-        style={{
-          display: "grid",
-          gridTemplateRows: `repeat(${PIECE_SIZE}, 20px)`,
-          gridTemplateColumns: `repeat(${PIECE_SIZE}, 20px)`,
-        }}
+        style={
+          {
+            "--rows": PIECE_SIZE,
+            "--cols": PIECE_SIZE,
+            display: "grid",
+            gridTemplateRows: "repeat(var(--rows), 20px)",
+            gridTemplateColumns: "repeat(var(--cols), 20px)",
+          } as React.CSSProperties
+        }
       >
         {Array.from({ length: PIECE_SIZE }).map((_, r) =>
           Array.from({ length: PIECE_SIZE }).map((_, c) => {
@@ -34,11 +40,10 @@ export default function Piece({
             return (
               <div
                 key={`${r}-${c}`}
-                style={{
-                  width: 20,
-                  height: 20,
-                  background: rotatedPiece[i] ? color : "#eee",
-                }}
+                className={clsx(
+                  "w-5 h-5",
+                  rotatedPiece[i] ? color : "bg-gray-200",
+                )}
               />
             );
           }),
@@ -49,7 +54,7 @@ export default function Piece({
           setRotatedPiece(rotateRight(rotatedPiece));
         }}
       >
-        Rotate 90°
+        <RotateCwIcon className="text-gray-400" size={14} />
       </button>
     </div>
   );

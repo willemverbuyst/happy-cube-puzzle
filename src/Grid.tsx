@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { COLS, ROWS } from "./config/general";
 
 export default function Grid({
@@ -9,11 +10,15 @@ export default function Grid({
 }) {
   return (
     <div
-      style={{
-        display: "grid",
-        gridTemplateRows: `repeat(${ROWS}, 20px)`,
-        gridTemplateColumns: `repeat(${COLS}, 20px)`,
-      }}
+      style={
+        {
+          "--rows": ROWS,
+          "--cols": COLS,
+          display: "grid",
+          gridTemplateRows: "repeat(var(--rows), 20px)",
+          gridTemplateColumns: "repeat(var(--cols), 20px)",
+        } as React.CSSProperties
+      }
     >
       {Array.from({ length: ROWS }).map((_, r) =>
         Array.from({ length: COLS }).map((_, c) => {
@@ -21,11 +26,7 @@ export default function Grid({
           return (
             <div
               key={`${r}-${c}`}
-              style={{
-                width: 20,
-                height: 20,
-                background: frame[i] ? color : "#eee",
-              }}
+              className={clsx("w-5 h-5", frame[i] ? color : "bg-gray-200")}
             />
           );
         }),
