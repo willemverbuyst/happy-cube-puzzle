@@ -35,3 +35,24 @@ export const BLUE_PIECE_3: Piece = [
   [0, 1, 1, 1, 0],
   [0, 0, 1, 0, 0],
 ] as const;
+export const BLUE_PIECE_4: Piece = [
+  [0, 0, 1, 0, 0],
+  [0, 1, 1, 1, 0],
+  [1, 1, 1, 1, 1],
+  [0, 1, 1, 1, 0],
+  [0, 1, 0, 1, 0],
+] as const;
+export const BLUE_PIECE_5: Piece = [
+  [0, 0, 1, 0, 1],
+  [1, 1, 1, 1, 1],
+  [0, 1, 1, 1, 0],
+  [1, 1, 1, 1, 1],
+  [0, 1, 0, 1, 0],
+] as const;
+export const BLUE_PIECE_6: Piece = [
+  [0, 0, 1, 0, 0],
+  [1, 1, 1, 1, 1],
+  [0, 1, 1, 1, 0],
+  [1, 1, 1, 1, 1],
+  [1, 1, 0, 1, 0],
+] as const;
