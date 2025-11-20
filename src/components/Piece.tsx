@@ -15,7 +15,7 @@ import {
   flipVertical,
   rotateLeft,
   rotateRight,
-} from "../utils/rotate";
+} from "../lib/rotate";
 
 export default function Piece({
   color,

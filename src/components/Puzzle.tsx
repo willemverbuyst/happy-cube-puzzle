@@ -1,9 +1,16 @@
 import clsx from "clsx";
+import { useMemo } from "react";
+import { shuffleArray } from "../lib/shuffle";
+import { nestedArrayToUint8 } from "../lib/toUint8";
 import type { PuzzleConfig } from "../types";
-import { nestedArrayToUint8 } from "../utils/toUint8";
 import Piece from "./Piece";
 
 export function Puzzle({ puzzleConfig }: { puzzleConfig: PuzzleConfig }) {
+  const shuffledPieces = useMemo(
+    () => shuffleArray(puzzleConfig.pieces),
+    [puzzleConfig.pieces],
+  );
+
   const frame = nestedArrayToUint8({
     pattern: puzzleConfig.frame,
     rows: puzzleConfig.puzzleRows,
@@ -39,7 +46,7 @@ export function Puzzle({ puzzleConfig }: { puzzleConfig: PuzzleConfig }) {
         )}
       </div>
       <div className="flex gap-14">
-        {puzzleConfig.pieces.map((piece, index) => (
+        {shuffledPieces.map((piece, index) => (
           <Piece
             key={`${puzzleConfig.color}-${index}`}
             color={puzzleConfig.color}
