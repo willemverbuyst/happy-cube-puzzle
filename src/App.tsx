@@ -1,8 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
 import { Puzzle } from "./components/Puzzle";
-import { COLORS } from "./config/general";
-import { PUZZLES } from "./config/puzzles";
+import { COLORS, PUZZLES } from "./config/puzzles";
 import type { ColorType } from "./types";
 
 function App() {

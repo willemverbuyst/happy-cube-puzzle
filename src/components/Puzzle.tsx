@@ -11,10 +11,10 @@ export function Puzzle({ puzzleConfig }: { puzzleConfig: PuzzleConfig }) {
     [puzzleConfig.pieces],
   );
 
-  const frame = nestedArrayToUint8({
+  const frameAsUint8Array = nestedArrayToUint8({
     pattern: puzzleConfig.frame,
-    rows: puzzleConfig.puzzleRows,
-    columns: puzzleConfig.puzzleColumns,
+    rows: puzzleConfig.frame.length,
+    columns: puzzleConfig.frame[0].length,
   });
 
   return (
@@ -22,23 +22,23 @@ export function Puzzle({ puzzleConfig }: { puzzleConfig: PuzzleConfig }) {
       <div
         style={
           {
-            "--rows": puzzleConfig.puzzleRows,
-            "--cols": puzzleConfig.puzzleColumns,
+            "--rows": puzzleConfig.frame.length,
+            "--cols": puzzleConfig.frame[0].length,
             display: "grid",
             gridTemplateRows: "repeat(var(--rows), 20px)",
             gridTemplateColumns: "repeat(var(--cols), 20px)",
           } as React.CSSProperties
         }
       >
-        {Array.from({ length: puzzleConfig.puzzleRows }).map((_, r) =>
-          Array.from({ length: puzzleConfig.puzzleColumns }).map((_, c) => {
-            const i = r * puzzleConfig.puzzleColumns + c;
+        {Array.from({ length: puzzleConfig.frame.length }).map((_, r) =>
+          Array.from({ length: puzzleConfig.frame[0].length }).map((_, c) => {
+            const i = r * puzzleConfig.frame[0].length + c;
             return (
               <div
                 key={`${r}-${c}`}
                 className={clsx(
                   "w-5 h-5",
-                  frame[i] ? puzzleConfig.color : "bg-gray-200",
+                  frameAsUint8Array[i] ? puzzleConfig.color : "bg-gray-200",
                 )}
               />
             );
@@ -50,13 +50,7 @@ export function Puzzle({ puzzleConfig }: { puzzleConfig: PuzzleConfig }) {
           <Piece
             key={`${puzzleConfig.color}-${index}`}
             color={puzzleConfig.color}
-            piece={nestedArrayToUint8({
-              pattern: piece,
-              rows: puzzleConfig.pieceRows,
-              columns: puzzleConfig.pieceColumns,
-            })}
-            rows={puzzleConfig.pieceRows}
-            columns={puzzleConfig.pieceColumns}
+            piece={piece}
           />
         ))}
       </div>

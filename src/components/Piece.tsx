@@ -16,19 +16,22 @@ import {
   rotateLeft,
   rotateRight,
 } from "../lib/rotate";
+import { nestedArrayToUint8 } from "../lib/toUint8";
+import type { Piece } from "../types";
 
 export default function Piece({
   color,
   piece,
-  rows,
-  columns,
 }: {
   color: string;
-  piece: Uint8Array<ArrayBuffer>;
-  rows: number;
-  columns: number;
+  piece: Piece<number, number>;
 }) {
-  const [rotatedPiece, setRotatedPiece] = useState(piece);
+  const pieceAsUint8Array = nestedArrayToUint8({
+    pattern: piece,
+    rows: piece.length,
+    columns: piece[0].length,
+  });
+  const [rotatedPiece, setRotatedPiece] = useState(pieceAsUint8Array);
 
   return (
     <div className="flex gap-2">
@@ -70,17 +73,17 @@ export default function Piece({
         <div
           style={
             {
-              "--rows": rows,
-              "--cols": columns,
+              "--rows": piece.length,
+              "--cols": piece[0].length,
               display: "grid",
               gridTemplateRows: "repeat(var(--rows), 20px)",
               gridTemplateColumns: "repeat(var(--cols), 20px)",
             } as React.CSSProperties
           }
         >
-          {Array.from({ length: rows }).map((_, r) =>
-            Array.from({ length: columns }).map((_, c) => {
-              const i = r * columns + c;
+          {Array.from({ length: piece.length }).map((_, r) =>
+            Array.from({ length: piece[0].length }).map((_, c) => {
+              const i = r * piece[0].length + c;
               return (
                 <div
                   key={`${r}-${c}`}

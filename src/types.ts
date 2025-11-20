@@ -1,24 +1,10 @@
-import type {
-  COLORS,
-  COLUMNS_15,
-  COLUMNS_5,
-  ROWS_11,
-  ROWS_5,
-} from "./config/general";
+import type { COLORS } from "./config/puzzles";
 
-export type Row5 = typeof ROWS_5;
-export type Row11 = typeof ROWS_11;
-export type Column5 = typeof COLUMNS_5;
-export type Column15 = typeof COLUMNS_15;
 export type ColorType = (typeof COLORS)[number];
 export type PuzzleConfig = {
   color: string;
   frame: Grid<number, number>;
   pieces: Piece<number, number>[];
-  puzzleRows: number;
-  puzzleColumns: number;
-  pieceRows: number;
-  pieceColumns: number;
 };
 
 type Cell = 0 | 1;
