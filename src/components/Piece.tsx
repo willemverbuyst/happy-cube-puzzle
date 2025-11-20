@@ -35,7 +35,7 @@ export default function Piece({
 
   return (
     <div className="group flex gap-2">
-      <div className="w-full flex flex-col justify-between">
+      <div className="flex w-full flex-col justify-between">
         <button
           onClick={() => {
             setRotatedPiece(
@@ -46,7 +46,7 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          className="p-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
         >
           <CornerLeftDown className="text-gray-400" size={14} />
         </button>
@@ -60,7 +60,7 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          className="p-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
         >
           <ArrowRight className="text-gray-400" size={14} />
         </button>
@@ -74,12 +74,12 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          className="p-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
         >
           <CornerLeftUp className="text-gray-400" size={14} />
         </button>
       </div>
-      <div className="w-full flex flex-col items-center justify-between">
+      <div className="flex w-full flex-col items-center justify-between">
         <button
           onClick={() => {
             setRotatedPiece(
@@ -90,7 +90,7 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          className="p-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
         >
           <ArrowDown className="text-gray-400" size={14} />
         </button>
@@ -112,7 +112,7 @@ export default function Piece({
                 <div
                   key={`${r}-${c}`}
                   className={clsx(
-                    "w-5 h-5",
+                    "h-5 w-5",
                     rotatedPiece[i] ? color : "inherit",
                   )}
                 />
@@ -130,13 +130,13 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          className="p-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
         >
           <ArrowUp className="text-gray-400" size={14} />
         </button>
       </div>
 
-      <div className="w-full flex flex-col justify-between">
+      <div className="flex w-full flex-col justify-between">
         <button
           onClick={() => {
             setRotatedPiece(
@@ -147,7 +147,7 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          className="p-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
         >
           <CornerRightDown className="text-gray-400" size={14} />
         </button>
@@ -161,7 +161,7 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          className="p-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
         >
           <ArrowLeft className="text-gray-400" size={14} />
         </button>
@@ -175,7 +175,7 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          className="p-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
         >
           <CornerRightUp className="text-gray-400" size={14} />
         </button>

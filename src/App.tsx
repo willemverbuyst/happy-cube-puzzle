@@ -8,13 +8,13 @@ function App() {
   const [color, setColor] = useState<ColorType>("blue");
 
   return (
-    <div className="w-screen flex flex-col items-center p-20 gap-14">
+    <div className="flex w-screen flex-col items-center gap-14 p-20">
       <div className="flex gap-2">
         {COLORS.map((color) => (
           <button
             key={color}
             type="button"
-            className={clsx("w-5 h-5", `bg-${color}-400`)}
+            className={clsx("h-5 w-5", `bg-${color}-400`)}
             onClick={() => setColor(color)}
           />
         ))}

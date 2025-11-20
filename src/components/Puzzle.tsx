@@ -38,7 +38,7 @@ export function Puzzle({ puzzleConfig }: { puzzleConfig: PuzzleConfig }) {
               <div
                 key={`${r}-${c}`}
                 className={clsx(
-                  "w-5 h-5",
+                  "h-5 w-5",
                   frameAsUint8Array[i] ? puzzleConfig.color : "bg-gray-200",
                 )}
               />
