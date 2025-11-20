@@ -10,8 +10,8 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "type:check": "tsc --noEmit",
-    "test:unit": "vitest src/lib/*test.ts --run",
-    "test:unit:watch": "vitest src/lib/*.test.ts --watch"
+    "test": "vitest src/**/*.test.ts --run",
+    "test:watch": "vitest src/**/*.test.ts --watch"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",

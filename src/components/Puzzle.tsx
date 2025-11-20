@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { useMemo } from "react";
 import { shuffleArray } from "../lib/shuffle";
 import { nestedArrayToUint8 } from "../lib/toUint8";
-import type { PuzzleConfig } from "../types";
+import type { PuzzleConfig } from "../lib/types";
 import Piece from "./Piece";
 
 export function Puzzle({ puzzleConfig }: { puzzleConfig: PuzzleConfig }) {

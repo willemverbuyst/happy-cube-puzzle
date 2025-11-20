@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import { Puzzle } from "./components/Puzzle";
 import { COLORS, PUZZLES } from "./config/puzzles";
-import type { ColorType } from "./types";
+import type { ColorType } from "./lib/types";
 
 function App() {
   const [color, setColor] = useState<ColorType>("blue");

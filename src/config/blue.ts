@@ -1,4 +1,4 @@
-import type { Color, Grid, Piece } from "../types";
+import type { Color, Grid, Piece } from "../lib/types";
 
 export const BLUE_COLOR: Color = "bg-blue-400";
 export const BLUE_FRAME: Grid<11, 15> = [

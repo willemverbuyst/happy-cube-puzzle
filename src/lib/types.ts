@@ -1,4 +1,4 @@
-import type { COLORS } from "./config/puzzles";
+import type { COLORS } from "../config/puzzles";
 
 export type ColorType = (typeof COLORS)[number];
 export type PuzzleConfig = {

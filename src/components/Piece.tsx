@@ -17,7 +17,7 @@ import {
   rotateRight,
 } from "../lib/rotate";
 import { nestedArrayToUint8 } from "../lib/toUint8";
-import type { Piece } from "../types";
+import type { Piece } from "../lib/types";
 
 export default function Piece({
   color,

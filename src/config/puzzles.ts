@@ -1,4 +1,4 @@
-import type { ColorType, PuzzleConfig } from "../types";
+import type { ColorType, PuzzleConfig } from "../lib/types";
 import { BLUE_COLOR, BLUE_FRAME, BLUE_PIECES } from "./blue";
 import { GREEN_COLOR, GREEN_FRAME, GREEN_PIECES } from "./green";
 import { ORANGE_COLOR, ORANGE_FRAME, ORANGE_PIECES } from "./orange";

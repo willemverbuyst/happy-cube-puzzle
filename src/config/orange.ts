@@ -1,4 +1,4 @@
-import type { Color, Grid, Piece } from "../types";
+import type { Color, Grid, Piece } from "../lib/types";
 
 export const ORANGE_COLOR: Color = "bg-orange-400";
 export const ORANGE_FRAME: Grid<11, 15> = [
