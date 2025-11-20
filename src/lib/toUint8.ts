@@ -1,11 +1,9 @@
-import type { Grid, Piece } from "../types";
-
 export function nestedArrayToUint8({
   pattern,
   rows,
   columns,
 }: {
-  pattern: Grid<number, number> | Piece<number, number>;
+  pattern: number[][];
   rows: number;
   columns: number;
 }) {
