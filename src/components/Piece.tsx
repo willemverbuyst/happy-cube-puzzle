@@ -38,7 +38,13 @@ export default function Piece({
       <div className="w-full flex flex-col justify-between">
         <button
           onClick={() => {
-            setRotatedPiece(rotateLeft(rotatedPiece));
+            setRotatedPiece(
+              rotateLeft({
+                arr: rotatedPiece,
+                rows: piece.length,
+                columns: piece[0].length,
+              }),
+            );
           }}
           className="p-2"
         >
@@ -46,7 +52,13 @@ export default function Piece({
         </button>
         <button
           onClick={() => {
-            setRotatedPiece(flipHorizontal(rotatedPiece));
+            setRotatedPiece(
+              flipHorizontal({
+                arr: rotatedPiece,
+                rows: piece.length,
+                columns: piece[0].length,
+              }),
+            );
           }}
           className="p-2"
         >
@@ -54,7 +66,13 @@ export default function Piece({
         </button>
         <button
           onClick={() => {
-            setRotatedPiece(rotateRight(rotatedPiece));
+            setRotatedPiece(
+              rotateRight({
+                arr: rotatedPiece,
+                rows: piece.length,
+                columns: piece[0].length,
+              }),
+            );
           }}
           className="p-2"
         >
@@ -64,7 +82,13 @@ export default function Piece({
       <div className="w-full flex flex-col items-center justify-between">
         <button
           onClick={() => {
-            setRotatedPiece(flipVertical(rotatedPiece));
+            setRotatedPiece(
+              flipVertical({
+                arr: rotatedPiece,
+                rows: piece.length,
+                columns: piece[0].length,
+              }),
+            );
           }}
           className="p-2"
         >
@@ -98,7 +122,13 @@ export default function Piece({
         </div>
         <button
           onClick={() => {
-            setRotatedPiece(flipVertical(rotatedPiece));
+            setRotatedPiece(
+              flipVertical({
+                arr: rotatedPiece,
+                rows: piece.length,
+                columns: piece[0].length,
+              }),
+            );
           }}
           className="p-2"
         >
@@ -109,7 +139,13 @@ export default function Piece({
       <div className="w-full flex flex-col justify-between">
         <button
           onClick={() => {
-            setRotatedPiece(rotateRight(rotatedPiece));
+            setRotatedPiece(
+              rotateRight({
+                arr: rotatedPiece,
+                rows: piece.length,
+                columns: piece[0].length,
+              }),
+            );
           }}
           className="p-2"
         >
@@ -117,7 +153,13 @@ export default function Piece({
         </button>
         <button
           onClick={() => {
-            setRotatedPiece(flipHorizontal(rotatedPiece));
+            setRotatedPiece(
+              flipHorizontal({
+                arr: rotatedPiece,
+                rows: piece.length,
+                columns: piece[0].length,
+              }),
+            );
           }}
           className="p-2"
         >
@@ -125,7 +167,13 @@ export default function Piece({
         </button>
         <button
           onClick={() => {
-            setRotatedPiece(rotateLeft(rotatedPiece));
+            setRotatedPiece(
+              rotateLeft({
+                arr: rotatedPiece,
+                rows: piece.length,
+                columns: piece[0].length,
+              }),
+            );
           }}
           className="p-2"
         >

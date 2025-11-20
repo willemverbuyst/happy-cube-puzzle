@@ -18,7 +18,7 @@ describe("rotateRight", () => {
       25, 20, 15, 10, 5,
     ]);
 
-    const result = rotateRight(input);
+    const result = rotateRight({ arr: input, rows: 5, columns: 5 });
     expect(result).toEqual(expected);
   });
 
@@ -26,7 +26,7 @@ describe("rotateRight", () => {
     const input = new Uint8Array(25).fill(0);
     const expected = new Uint8Array(25).fill(0);
 
-    const result = rotateRight(input);
+    const result = rotateRight({ arr: input, rows: 5, columns: 5 });
     expect(result).toEqual(expected);
   });
 
@@ -34,13 +34,13 @@ describe("rotateRight", () => {
     const input = new Uint8Array(25).fill(1);
     const expected = new Uint8Array(25).fill(1);
 
-    const result = rotateRight(input);
+    const result = rotateRight({ arr: input, rows: 5, columns: 5 });
     expect(result).toEqual(expected);
   });
 
   it("should return a new array instance", () => {
     const input = new Uint8Array(25).fill(1);
-    const result = rotateRight(input);
+    const result = rotateRight({ arr: input, rows: 5, columns: 5 });
 
     expect(result).not.toBe(input);
     expect(result).toBeInstanceOf(Uint8Array);
@@ -60,7 +60,7 @@ describe("rotateLeft", () => {
       1, 6, 11, 16, 21,
     ]);
 
-    const result = rotateLeft(input);
+    const result = rotateLeft({ arr: input, rows: 5, columns: 5 });
     expect(result).toEqual(expected);
   });
 
@@ -68,7 +68,7 @@ describe("rotateLeft", () => {
     const input = new Uint8Array(25).fill(0);
     const expected = new Uint8Array(25).fill(0);
 
-    const result = rotateLeft(input);
+    const result = rotateLeft({ arr: input, rows: 5, columns: 5 });
     expect(result).toEqual(expected);
   });
 
@@ -76,13 +76,13 @@ describe("rotateLeft", () => {
     const input = new Uint8Array(25).fill(1);
     const expected = new Uint8Array(25).fill(1);
 
-    const result = rotateLeft(input);
+    const result = rotateLeft({ arr: input, rows: 5, columns: 5 });
     expect(result).toEqual(expected);
   });
 
   it("should return a new array instance", () => {
     const input = new Uint8Array(25).fill(1);
-    const result = rotateLeft(input);
+    const result = rotateLeft({ arr: input, rows: 5, columns: 5 });
 
     expect(result).not.toBe(input);
     expect(result).toBeInstanceOf(Uint8Array);
@@ -102,7 +102,7 @@ describe("flipHorizontal", () => {
       24, 23, 22, 21,
     ]);
 
-    const result = flipHorizontal(input);
+    const result = flipHorizontal({ arr: input, rows: 5, columns: 5 });
     expect(result).toEqual(expected);
   });
 
@@ -110,7 +110,7 @@ describe("flipHorizontal", () => {
     const input = new Uint8Array(25).fill(0);
     const expected = new Uint8Array(25).fill(0);
 
-    const result = flipHorizontal(input);
+    const result = flipHorizontal({ arr: input, rows: 5, columns: 5 });
     expect(result).toEqual(expected);
   });
 
@@ -118,13 +118,13 @@ describe("flipHorizontal", () => {
     const input = new Uint8Array(25).fill(1);
     const expected = new Uint8Array(25).fill(1);
 
-    const result = flipHorizontal(input);
+    const result = flipHorizontal({ arr: input, rows: 5, columns: 5 });
     expect(result).toEqual(expected);
   });
 
   it("should return a new array instance", () => {
     const input = new Uint8Array(25).fill(1);
-    const result = flipHorizontal(input);
+    const result = flipHorizontal({ arr: input, rows: 5, columns: 5 });
 
     expect(result).not.toBe(input);
     expect(result).toBeInstanceOf(Uint8Array);
@@ -144,7 +144,7 @@ describe("flipVertical", () => {
       10, 1, 2, 3, 4, 5,
     ]);
 
-    const result = flipVertical(input);
+    const result = flipVertical({ arr: input, rows: 5, columns: 5 });
     expect(result).toEqual(expected);
   });
 
@@ -152,7 +152,7 @@ describe("flipVertical", () => {
     const input = new Uint8Array(25).fill(0);
     const expected = new Uint8Array(25).fill(0);
 
-    const result = flipVertical(input);
+    const result = flipVertical({ arr: input, rows: 5, columns: 5 });
     expect(result).toEqual(expected);
   });
 
@@ -160,13 +160,13 @@ describe("flipVertical", () => {
     const input = new Uint8Array(25).fill(1);
     const expected = new Uint8Array(25).fill(1);
 
-    const result = flipVertical(input);
+    const result = flipVertical({ arr: input, rows: 5, columns: 5 });
     expect(result).toEqual(expected);
   });
 
   it("should return a new array instance", () => {
     const input = new Uint8Array(25).fill(1);
-    const result = flipVertical(input);
+    const result = flipVertical({ arr: input, rows: 5, columns: 5 });
 
     expect(result).not.toBe(input);
     expect(result).toBeInstanceOf(Uint8Array);
