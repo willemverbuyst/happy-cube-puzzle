@@ -20,6 +20,7 @@ export function Puzzle({ puzzleConfig }: { puzzleConfig: PuzzleConfig }) {
   return (
     <div className="flex flex-col items-center gap-14">
       <div
+        id="puzzle-grid"
         style={
           {
             "--rows": puzzleConfig.frame.length,
