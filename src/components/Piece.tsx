@@ -34,7 +34,7 @@ export default function Piece({
   const [rotatedPiece, setRotatedPiece] = useState(pieceAsUint8Array);
 
   return (
-    <div className="flex gap-2">
+    <div className="group flex gap-2">
       <div className="w-full flex flex-col justify-between">
         <button
           onClick={() => {
@@ -46,7 +46,7 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2"
+          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
           <CornerLeftDown className="text-gray-400" size={14} />
         </button>
@@ -60,7 +60,7 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2"
+          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
           <ArrowRight className="text-gray-400" size={14} />
         </button>
@@ -74,7 +74,7 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2"
+          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
           <CornerLeftUp className="text-gray-400" size={14} />
         </button>
@@ -90,7 +90,7 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2"
+          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
           <ArrowDown className="text-gray-400" size={14} />
         </button>
@@ -130,7 +130,7 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2"
+          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
           <ArrowUp className="text-gray-400" size={14} />
         </button>
@@ -147,7 +147,7 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2"
+          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
           <CornerRightDown className="text-gray-400" size={14} />
         </button>
@@ -161,7 +161,7 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2"
+          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
           <ArrowLeft className="text-gray-400" size={14} />
         </button>
@@ -175,7 +175,7 @@ export default function Piece({
               }),
             );
           }}
-          className="p-2"
+          className="p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
         >
           <CornerRightUp className="text-gray-400" size={14} />
         </button>
